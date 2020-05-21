@@ -967,7 +967,7 @@ def render(content=None,
     try:
         exec(code, context)
     except Exception:
-        # for i,line in enumerate(code.split('\n')): print i,line
+        for i,line in enumerate(code.split('\n')): print(i,line)
         raise
 
     # Returned the rendered content.
